@@ -135,11 +135,20 @@ Route::group(array('before' => 'auth', 'prefix' => 'administrator'), function()
 	
 });
 
+
 # 文章模块
 Route::group(array('prefix' => 'article'), function()
 {
 
 });
+
+
+# Seo设置
+Route::group(array('before' => 'auth', 'prefix' => 'seo'), function()
+{
+	
+});
+
 
 # PHPExecl模块
 Route::group(array('prefix' => 'execl'), function()
