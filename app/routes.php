@@ -33,7 +33,7 @@ Route::group(array('before' => 'guest'), function()
 		Route::post('sign-in-post', 
 			array(
 				'as' => 'sign-in-post',
-				'uses' => 'AccountController@postSignIn'
+				'uses' => 'AuthController@postSignIn'
 			)
 		);
 
@@ -41,7 +41,7 @@ Route::group(array('before' => 'guest'), function()
 		Route::post('sign-up-post',
 			array(
 				'as' => 'sign-up-post',
-				'uses' => 'AccountController@postSignUp'
+				'uses' => 'AuthController@postSignUp'
 			)
 		);
 
@@ -49,7 +49,7 @@ Route::group(array('before' => 'guest'), function()
 		Route::post('forgot-password-post',
 			array(
 				'as' => 'forgot-password-post',
-				'uses' => 'AccountController@postForgotPassword'
+				'uses' => 'AuthController@postForgotPassword'
 			)
 		);
 	});
@@ -58,7 +58,7 @@ Route::group(array('before' => 'guest'), function()
 	Route::get('sign-in',
 		array(
 			'as' => 'sign-in',
-			'uses' => 'AccountController@getSignIn'
+			'uses' => 'AuthController@getSignIn'
 		)
 	);
 
@@ -66,7 +66,7 @@ Route::group(array('before' => 'guest'), function()
 	Route::get('sign-up',
 		array(
 			'as' => 'sign-up',
-			'uses' => 'AccountController@getSignUp'
+			'uses' => 'AuthController@getSignUp'
 		)
 	);
 
@@ -74,7 +74,7 @@ Route::group(array('before' => 'guest'), function()
 	Route::get('activate-account/{code}',
 		array(
 			'as' => 'activate-account',
-			'uses' => 'AccountController@getActivateAccount'
+			'uses' => 'AuthController@getActivateAccount'
 		)
 	);
 
@@ -82,7 +82,7 @@ Route::group(array('before' => 'guest'), function()
 	Route::get('forgot-password',
 		array(
 			'as' => 'forgot-password',
-			'uses' => 'AccountController@getForgotPassword'
+			'uses' => 'AuthController@getForgotPassword'
 		)
 	);
 
@@ -90,7 +90,7 @@ Route::group(array('before' => 'guest'), function()
 	Route::get('forgot-password-activate/{user}/{code}',
 		array(
 			'as' => 'forgot-password-activate',
-			'uses' => 'AccountController@getForgotPasswordActivate'
+			'uses' => 'AuthController@getForgotPasswordActivate'
 		)
 	);
 
@@ -106,7 +106,7 @@ Route::group(array('before' => 'auth'), function()
 		Route::post('change-password-post',
 			array(
 				'as' => 'change-password-post',
-				'uses' => 'AccountController@postChangePassword'
+				'uses' => 'AuthController@postChangePassword'
 			)
 		);
 	});
@@ -115,7 +115,7 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('change-password',
 		array(
 			'as' => 'change-password',
-			'uses' => 'AccountController@getChangePassword'
+			'uses' => 'AuthController@getChangePassword'
 		)
 	);
 
@@ -123,7 +123,7 @@ Route::group(array('before' => 'auth'), function()
 	Route::get('sign-out',
 		array (
 			'as' => 'sign-out',
-			'uses' => 'AccountController@getSignOut'
+			'uses' => 'AuthController@getSignOut'
 		)
 	);
 });
